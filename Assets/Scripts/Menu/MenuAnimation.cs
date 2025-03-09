@@ -19,13 +19,19 @@ namespace Menu
         private List<Rigidbody2D> _spawnedObjects = new();
         private Color[] _colors = { Color.red, Color.green, Color.blue, Color.yellow, Color.cyan };
 
+        private Vector2 _initialScale;
+
         private void Awake()
         {
+            _initialScale = boxTransform.localScale;
+
             CreateObjects();
         }
 
         public void StartAnimation()
         {
+            boxTransform.localScale = _initialScale;
+
             StartScaling();
             ResetObjects();
         }
