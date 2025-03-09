@@ -5,9 +5,10 @@ namespace Gameplay
 {
     class MatchFinder
     {
-        public List<Ball> FindMatches(List<Ball>[] columnsBalls)
+        public List<Ball> FindMatches(List<Ball>[] columnsBalls, out int ballIndex)
         {
             HashSet<Ball> matchedBalls = new();
+            ballIndex = -1;
 
             //vertical matches
             for (int col = 0; col < columnsBalls.Length; col++)
@@ -20,6 +21,7 @@ namespace Gameplay
                         matchedBalls.Add(columnBalls[i]);
                         matchedBalls.Add(columnBalls[i + 1]);
                         matchedBalls.Add(columnBalls[i + 2]);
+                        ballIndex = columnBalls[i].Index;
                     }
                 }
             }
@@ -38,6 +40,7 @@ namespace Gameplay
                         matchedBalls.Add(b1);
                         matchedBalls.Add(b2);
                         matchedBalls.Add(b3);
+                        ballIndex = b1.Index;
                     }
                 }
             }
@@ -54,6 +57,7 @@ namespace Gameplay
                     matchedBalls.Add(b1);
                     matchedBalls.Add(b2);
                     matchedBalls.Add(b3);
+                    ballIndex = b1.Index;
                 }
             }
 
@@ -68,6 +72,7 @@ namespace Gameplay
                     matchedBalls.Add(b1);
                     matchedBalls.Add(b2);
                     matchedBalls.Add(b3);
+                    ballIndex = b1.Index;
                 }
             }
 

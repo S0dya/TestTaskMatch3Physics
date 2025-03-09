@@ -7,8 +7,10 @@ namespace Infos
     {
         [SerializeField] private Color color = Color.white;
         [SerializeField] private int index;
+        [SerializeField] private int score = 1;
 
         public Color Color => color;
         public int Index => index;
+        public int Score => score;
     }
 }

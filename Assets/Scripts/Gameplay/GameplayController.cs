@@ -107,11 +107,11 @@ namespace Gameplay
                 return;
             }
 
-            var matches = _matchFinder.FindMatches(_columnsBalls);
+            var matches = _matchFinder.FindMatches(_columnsBalls, out int ballIndex);
 
             if (matches.Count > 0)
             {
-                _score++;
+                _score += ballsInfos.First(x => x.Index == ballIndex).Score;
 
                 var ballsToFall = DestroyBalls(matches);
                 _activeBalls.AddRange(ballsToFall);

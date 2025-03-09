@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   color: {r: 0, g: 0.11743784, b: 1, a: 1}
   index: 2
+  score: 3

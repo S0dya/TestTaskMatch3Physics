@@ -13,3 +13,5 @@ MonoBehaviour:
   m_Name: BallRed
   m_EditorClassIdentifier: 
   color: {r: 1, g: 0, b: 0, a: 1}
+  index: 0
+  score: 1
