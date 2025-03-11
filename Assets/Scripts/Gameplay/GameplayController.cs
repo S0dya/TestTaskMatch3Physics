@@ -121,8 +121,6 @@ namespace Gameplay
             else if (AreAllColumnsFull())
             {
                 GameOver();
-
-                return;
             }
             else
             {

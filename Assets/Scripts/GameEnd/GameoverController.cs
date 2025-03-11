@@ -10,6 +10,7 @@ namespace GameEnd
     public class GameoverController : MonoBehaviour
     {
         [SerializeField] private Button nextWindowButton;
+        [SerializeField] private Button replayWindowButton;
         [SerializeField] private TextMeshProUGUI scoreText;
 
         [Inject] private WindowsController _windowsController;
@@ -17,6 +18,7 @@ namespace GameEnd
         private void Awake()
         {
             nextWindowButton.onClick.AddListener(() => _windowsController.OpenWindow(0));
+            replayWindowButton.onClick.AddListener(() => _windowsController.OpenWindow(1));
         }
 
         private void OnEnable()
